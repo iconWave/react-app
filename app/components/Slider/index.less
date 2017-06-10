@@ -1,0 +1,29 @@
+.carousel{
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      li{
+        display: flex;
+        flex-direction: column;
+        line-height: 25px;
+        text-align: center;
+      }
+      width: 20%;
+    }
+  }
+}
+.dots{
+  display: flex;
+  justify-content: center;
+  li{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    margin: 10px 5px;
+    background: #ccc;
+  }
+  .active{
+    background: #e9203d;
+  }
+}

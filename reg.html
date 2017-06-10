@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var str = '<br />3333<br /> <a href=" ">cwindow-ibc-2.0.jar</a ><br /> <a href=" ">cwindow-ibc-2.0.jar</a > <div class="signdom">11111ssssssssssssss <a href=" ">cwindow-ibc-2.0.jar</a ><a href=" ">cwindow-ibc-2.0.jar</a ></div>';
+
+    var str1 = '<a href=" ">cwindow-ibc-2.0.jar</a >';
+
+    function aList(str){
+        var ary = [];
+        var reg = /<a\s+href="[^><]*">([\s\S]*?)(?=<\/a\s*>)/g;
+        reg.lastIndex = 0;
+
+        var result = reg.exec(str);
+        console.log(reg.lastIndex);
+        while (result){
+            console.log(reg.lastIndex);
+            console.log(result);
+            ary.push(result[1]);
+            result = reg.exec(str);
+        }
+
+        return ary;
+
+    }
+
+    console.log(aList(str));
+
+
+</script>
+</body>
+</html>
